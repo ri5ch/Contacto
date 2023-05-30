@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <script src="script.js"></script>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+    <img id="miImagen" src="/retroluxe.png" width="150px" height="60px">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">REBAJAS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              PRODUCTOS
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">CAMISETAS</a></li>
+              <li><a class="dropdown-item" href="#">CHAQUETAS</a></li>
+              <li><a class="dropdown-item" href="#">CONTACTANOS</a></li>
+              <li><a class="dropdown-item" href="#">GUIA DE TALLAS</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="buscador" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">BUSCAR</button>
+        </form>
+
+  <div class="enlaces">
+        <a href="#">
+          <img src="./heart.svg" alt="megusta" width="" >
+        </a>
+        <a href="#">
+          <img src="./cart.svg" alt="carrito">
+        </a>
+        <a href="./login">
+          <img src="./person-circle.svg" alt="perfil">
+        </a>
+      </div>
+    </div>
+    </div>
+  
+    </nav>
+
+  <style>
+        #map {
+          height: 70%;
+        }
+        html, body {
+          height: 80%;
+          margin: 0;
+          padding: 0;
+        }
+  </style>
+
+</head>
+
+<body>
+  <div class="frases">
+    <p id="first-paragraph">QUIERES SABER UN POCO MAS , EH PILLIN ...</p>
+    <p id="second-paragraph">PUES SIGUE DESLIZANDO...</p>
+  </div>
+    <div id="map"></div>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI8SIAqGnlvGX9MLMbpBmpDZcKiSu3Q0Q&callback=initMap">
+</script>
+<script>
+const argCoords={lat: 40.4365, lng: -3.61041};
+const mapDiv=document.getElementById("map")
+let map;
+let marker;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 40.432581939168166, lng: -3.6071509537090876 },
+            zoom: 8,
+          });
+          marker=new google.maps.Marker({
+        position:argCoords,
+        map:map,
+          })
+        }
+        
+        window.initMap = initMap;</script>
+
+
+
+<footer class="bg-dark text-center text-white fixed-bottom">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- TIKTOK -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <img src="/brand-tiktok.svg" alt="TikTok">
+      </a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button" >
+         
+          <img src="/brand-instagram.svg" alt="instagram">
+
+      </a>
+
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#" role="button" >
+          <img src="/brand-tiktok.svg" alt="google">
+      </a>
+
+
+  
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Suscribete a nuestro newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example21" class="form-control" />
+              <label class="form-label" for="form5Example21">Correo electronico</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4 heartbeat" id="myButton">
+              Subscribete
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+       ¡Bienvenido,descubre una increíble selección de prendas y accesorios que te transportarán a épocas pasadas llenas de estilo y nostalgia.
+      ¡Revive el encanto del pasado con nuestra colección de ropa retro!
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">NUESTRA TIENDA</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">DEVOLUCIONES</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">POLITICA DEVOLUCIONES</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">PROMOCIONES</a>
+            </li>
+            
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">NOSOTROS</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">PREGUNTAS FRECUENTES
+             </a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">CONTACTO</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">COMPRA AL POR MAYOR</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">LEGAL</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">AVISO LEGAL</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">POLÍTICA DE COOKIES</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">POLÍTICAS DE PRIVACIDAD </a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">TÉRMINOS Y CONDICIONES DE USO</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">UNETE A NOSOTROS</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">HAZTE MEMBER</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">DESCUENTO PARA ESTUDIANTES</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">CODIGOS PROMOCIONALES</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-white" href="">Retroluxe</a>
+  </div>
+
+</footer>
+</body>
+</html>
